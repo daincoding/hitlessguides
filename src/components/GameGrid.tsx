@@ -7,6 +7,7 @@ export interface Game {
   name: string;
   genre: string;
   background: string;
+  category: string;
 }
 
 const GameGrid: React.FC = () => {
