@@ -1,0 +1,19 @@
+What is needed?
+
+After selecting a category we need to show in Game Cards the Thumbnails of the Guides
+
+- We need a back button
+- Run Selector Appears
+
+---
+
+1.  Create a Gamecard based on a YouTube Link
+2.  Reihenfolge soll sein: Click on Category ( all guides appear ) - Run selector ( guides with Tags appear )
+
+if selectedCategory === GameName => hide GameGrid and show GameNameGuides
+
+if selectedRun === GameNameTag => hide elements from
+
+---
+
+GameCards clickable machen und den Namen als Filter weitergeben das dann es in APP angezeigt wird sonst hidden

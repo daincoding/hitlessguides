@@ -1,0 +1,8 @@
+[
+    { "id": 1, "name": "Any%", "runtag": "any-percent" },
+    { "id": 2, "name": "All Bosses", "runtag": "all-bosses" },
+    { "id": 3, "name": "All Bosses + DLC", "runtag": "all-bosses-dlc" },
+    { "id": 4, "name": "Low Level", "runtag": "low-level" },
+    { "id": 5, "name": "Special Restrictions", "runtag": "special-restrictions" },
+    { "id": 6, "name": "Weapon Specific", "runtag": "weapon-specific" }
+  ]
