@@ -13,9 +13,10 @@ export interface Game {
 
 interface Props {
   selectedCategory: Categories | null;
+  onGameSelect: (game: Game) => void;
 }
 
-const GameGrid: React.FC<Props> = ({ selectedCategory }) => {
+const GameGrid: React.FC<Props> = ({ selectedCategory, onGameSelect }) => {
   const [games, setGames] = useState<Game[]>([]); // State to hold the games list
 
   useEffect(() => {
@@ -27,9 +28,12 @@ const GameGrid: React.FC<Props> = ({ selectedCategory }) => {
   }, []);
 
   // Filter games by the selected category if a category is selected
-  const filteredGames = selectedCategory
-    ? games.filter((game) => game.category === selectedCategory.category)
-    : games;
+  const filteredGames = games.filter((game) => {
+    const matchesCategory = selectedCategory
+      ? game.category === selectedCategory.category
+      : true;
+    return matchesCategory;
+  });
 
   return (
     <div>
@@ -39,7 +43,11 @@ const GameGrid: React.FC<Props> = ({ selectedCategory }) => {
         padding="10px"
       >
         {filteredGames.map((game) => (
-          <GameCard key={game.id} game={game} />
+          <GameCard
+            key={game.id}
+            game={game}
+            onClick={() => onGameSelect(game)}
+          />
         ))}
       </SimpleGrid>
     </div>

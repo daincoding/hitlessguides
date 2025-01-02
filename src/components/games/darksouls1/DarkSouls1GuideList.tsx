@@ -1,8 +1,8 @@
 import { SimpleGrid } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import Ds1Card from "./Ds1Card";
-import { Categories } from "@/components/CategoryList";
 import { RunOption } from "@/components/RunSelector";
+import { Game } from "@/components/GameGrid";
 
 export interface Guide {
   id: number;
@@ -12,16 +12,17 @@ export interface Guide {
   category: string;
   thumbnail: string;
   youtubeLink: string;
+  gameId: number;
 }
 
 interface Props {
-  selectedCategory: Categories | null;
   selectedRun: RunOption | null;
+  selectedGame: Game | null; // The currently selected game
 }
 
 const DarkSouls1GuideList: React.FC<Props> = ({
-  selectedCategory,
   selectedRun,
+  selectedGame,
 }) => {
   const [guides, setGuides] = useState<Guide[]>([]); // State to hold the guides list
 
@@ -33,15 +34,12 @@ const DarkSouls1GuideList: React.FC<Props> = ({
       .catch((error) => console.error("Error loading guides:", error));
   }, []);
 
-  // Filter guides by selected category and selected run if provided
+  // Filter guides by selected game and run
   const filteredGuides = guides.filter((guide) => {
-    const categoryMatches = selectedCategory
-      ? guide.category === selectedCategory.category
-      : true; // If no category is selected, all guides match
+    const gameMatches = selectedGame ? guide.gameId === selectedGame.id : true; // Match by gameId
+    const runMatches = selectedRun ? guide.runtag === selectedRun.runtag : true; // Match by runtag
 
-    const runMatches = selectedRun ? guide.runtag === selectedRun.runtag : true; // If no run is selected, all guides match
-
-    return categoryMatches && runMatches; // Both conditions must be true
+    return gameMatches && runMatches; // Both must match
   });
 
   return (

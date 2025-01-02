@@ -3,11 +3,17 @@ import { Game } from "./GameGrid";
 
 interface Props {
   game: Game;
+  onClick: () => void; // New prop for click handling
 }
 
-const GameCard = ({ game }: Props) => {
+const GameCard = ({ game, onClick }: Props) => {
   return (
-    <Card.Root borderRadius={10} overflow="hidden">
+    <Card.Root
+      borderRadius={10}
+      overflow="hidden"
+      onClick={onClick}
+      cursor="pointer"
+    >
       <Image src={game.background} />
       <Card.Body>
         <Card.Title fontSize="2xl" textAlign="center">

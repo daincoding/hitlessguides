@@ -1,16 +1,29 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Box, Grid, GridItem } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
-import GameGrid from "./components/GameGrid";
+import GameGrid, { Game } from "./components/GameGrid";
 import CategoryList, { Categories } from "./components/CategoryList";
 import { useState } from "react";
 import RunSelector, { RunOption } from "./components/RunSelector";
 import DarkSouls1GuideList from "./components/games/darksouls1/DarkSouls1GuideList";
+import HeadingMain from "./components/HeadingMain";
 
 function App() {
+  // UseStates
+
   const [selectedCategory, setSelectedCategory] = useState<Categories | null>(
     null
   );
   const [selectedRun, setSelectedRun] = useState<RunOption | null>(null);
+  const [selectedGame, setSelectedGame] = useState<Game | null>(null);
+
+  // Handles
+
+  const handleGameSelection = (game: Game) => {
+    setSelectedGame(game); // Set the new selected game
+    setSelectedRun(null); // Reset the run filter
+  };
+
+  // MainApp
 
   return (
     <Grid
@@ -29,19 +42,39 @@ function App() {
       <GridItem area="aside" hideBelow="lg" paddingX={5}>
         <CategoryList
           selectedCategory={selectedCategory}
-          onSelectedCategory={(category) => setSelectedCategory(category)}
-        ></CategoryList>
+          onSelectedCategory={(category) => {
+            setSelectedCategory(category);
+            setSelectedGame(null); // Reset game when a category is selected
+          }}
+        />
       </GridItem>
       <GridItem area="main">
-        <RunSelector
-          selectedRun={selectedRun}
-          onSelectedRun={(option) => setSelectedRun(option)}
-        ></RunSelector>
-        <GameGrid selectedCategory={selectedCategory}></GameGrid>
-        <DarkSouls1GuideList
-          selectedCategory={selectedCategory}
-          selectedRun={selectedRun}
-        ></DarkSouls1GuideList>
+        <Box paddingLeft={3}>
+          {selectedGame && (
+            <HeadingMain
+              selectedRun={selectedRun}
+              selectedGame={selectedGame}
+            ></HeadingMain>
+          )}
+
+          {selectedGame && (
+            <RunSelector
+              selectedRun={selectedRun}
+              onSelectedRun={(option) => setSelectedRun(option)}
+            />
+          )}
+        </Box>
+        {selectedGame ? (
+          <DarkSouls1GuideList
+            selectedRun={selectedRun}
+            selectedGame={selectedGame}
+          />
+        ) : (
+          <GameGrid
+            selectedCategory={selectedCategory}
+            onGameSelect={handleGameSelection}
+          />
+        )}
       </GridItem>
     </Grid>
   );
