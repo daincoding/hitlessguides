@@ -17,3 +17,10 @@ if selectedRun === GameNameTag => hide elements from
 ---
 
 GameCards clickable machen und den Namen als Filter weitergeben das dann es in APP angezeigt wird sonst hidden
+
+--
+
+1. Füge 2 weitere game Components Kategorien ein
+2. Footer
+3. Backbutton in NavBar
+4. Vercel

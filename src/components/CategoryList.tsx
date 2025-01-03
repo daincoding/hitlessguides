@@ -1,4 +1,4 @@
-import { Button, HStack, Image, List } from "@chakra-ui/react";
+import { Button, Heading, HStack, Image, List } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 
 export interface Categories {
@@ -27,29 +27,34 @@ const CategoryList: React.FC<Props> = ({
   }, []);
 
   return (
-    <List.Root listStyle="none">
-      {category.map((category) => (
-        <List.Item key={category.id} paddingY="5px">
-          <HStack>
-            <Image
-              boxSize="32px"
-              borderRadius={8}
-              src={category.categorylogo}
-            ></Image>
-            <Button
-              fontSize="lg"
-              variant="ghost"
-              fontWeight={
-                category.id === selectedCategory?.id ? "bold" : "normal"
-              }
-              onClick={() => onSelectedCategory(category)}
-            >
-              {category.category}
-            </Button>
-          </HStack>
-        </List.Item>
-      ))}
-    </List.Root>
+    <>
+      <Heading marginY={10} paddingLeft={8}>
+        Categories
+      </Heading>
+      <List.Root listStyle="none">
+        {category.map((category) => (
+          <List.Item key={category.id} paddingY="5px">
+            <HStack>
+              <Image
+                boxSize="32px"
+                borderRadius={8}
+                src={category.categorylogo}
+              ></Image>
+              <Button
+                fontSize="lg"
+                variant="ghost"
+                fontWeight={
+                  category.id === selectedCategory?.id ? "bold" : "normal"
+                }
+                onClick={() => onSelectedCategory(category)}
+              >
+                {category.category}
+              </Button>
+            </HStack>
+          </List.Item>
+        ))}
+      </List.Root>
+    </>
   );
 };
 
