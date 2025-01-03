@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "name": "Dark Souls III No Hit Guide - Hidden Body, +9, ~1:40 Route",
+      "author": "Baryon23",
+      "runtag": ["any-percent"],
+      "gameId": 3,
+      "thumbnail": "https://img.youtube.com/vi/c90CLJq3KaI/maxresdefault.jpg",
+      "youtubeLink": "https://www.youtube.com/watch?v=c90CLJq3KaI"
+    },
+    {
+        "id": 2,
+        "name": "Basic Dark Souls III SL1 No Hit Guide - +9, ~1:45 Route",
+        "author": "Baryon23",
+        "runtag": "low-level",
+        "gameId": 3,
+        "thumbnail": "https://img.youtube.com/vi/v2E1rVlQLrM/maxresdefault.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=v2E1rVlQLrM"
+      }
+  ]

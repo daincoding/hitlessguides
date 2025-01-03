@@ -8,7 +8,7 @@ interface Props {
 }
 
 const HeadingMain = ({ selectedRun, selectedGame }: Props) => {
-  const head = `${selectedGame?.name || ""} - ${selectedRun?.name || ""}`;
+  const head = `${selectedGame?.name || ""} ${selectedRun?.name || ""}`;
 
   return (
     <Heading as="h1" marginY={10} fontSize="5xl">

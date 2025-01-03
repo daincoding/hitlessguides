@@ -1,6 +1,6 @@
 import { SimpleGrid } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import Ds1Card from "./Ds1Card";
+import Ds3Card from "./Ds3Card";
 import { RunOption } from "@/components/RunSelector";
 import { Game } from "@/components/GameGrid";
 
@@ -20,7 +20,7 @@ interface Props {
   selectedGame: Game | null; // The currently selected game
 }
 
-const DarkSouls1GuideList: React.FC<Props> = ({
+const DarkSouls3GuideList: React.FC<Props> = ({
   selectedRun,
   selectedGame,
 }) => {
@@ -28,7 +28,7 @@ const DarkSouls1GuideList: React.FC<Props> = ({
 
   useEffect(() => {
     // Fetch the local JSON file
-    fetch("/gameguides/darksouls1.json")
+    fetch("/gameguides/darksouls3.json")
       .then((response) => response.json())
       .then((data) => setGuides(data))
       .catch((error) => console.error("Error loading guides:", error));
@@ -52,11 +52,11 @@ const DarkSouls1GuideList: React.FC<Props> = ({
         padding="10px"
       >
         {filteredGuides.map((guide) => (
-          <Ds1Card key={guide.id} guide={guide} />
+          <Ds3Card key={guide.id} guide={guide} />
         ))}
       </SimpleGrid>
     </div>
   );
 };
 
-export default DarkSouls1GuideList;
+export default DarkSouls3GuideList;
