@@ -11,6 +11,10 @@ import DarkSouls3GuideList from "./components/games/darksouls3/DarkSouls3GuideLi
 import LoPGuideList from "./components/games/liesofp/LoPGuideList";
 import Footer from "./components/Footer";
 import { RxReset } from "react-icons/rx";
+import BBGuideList from "./components/games/bloodborne/BBGuideList";
+import DeSGuideList from "./components/games/demonssouls/DeSGuideList";
+import SKGuideList from "./components/games/sekiro/SKGuideList";
+import ERGuideList from "./components/games/eldenring/ERGuideList";
 
 function App() {
   // UseStates
@@ -87,22 +91,54 @@ function App() {
         </Box>
         {selectedGame ? (
           <>
-            <DarkSouls1GuideList
-              selectedRun={selectedRun}
-              selectedGame={selectedGame}
-            />
-            <DarkSouls2GuideList
-              selectedRun={selectedRun}
-              selectedGame={selectedGame}
-            />
-            <DarkSouls3GuideList
-              selectedRun={selectedRun}
-              selectedGame={selectedGame}
-            />
-            <LoPGuideList
-              selectedRun={selectedRun}
-              selectedGame={selectedGame}
-            />
+            {selectedGame.name === "Dark Souls I" && (
+              <DarkSouls1GuideList
+                selectedRun={selectedRun}
+                selectedGame={selectedGame}
+              />
+            )}
+            {selectedGame.name === "Dark Souls II" && (
+              <DarkSouls2GuideList
+                selectedRun={selectedRun}
+                selectedGame={selectedGame}
+              />
+            )}
+            {selectedGame.name === "Dark Souls III" && (
+              <DarkSouls3GuideList
+                selectedRun={selectedRun}
+                selectedGame={selectedGame}
+              />
+            )}
+            {selectedGame.name === "Lies of P" && (
+              <LoPGuideList
+                selectedRun={selectedRun}
+                selectedGame={selectedGame}
+              />
+            )}
+            {selectedGame.name === "Bloodborne" && (
+              <BBGuideList
+                selectedRun={selectedRun}
+                selectedGame={selectedGame}
+              />
+            )}
+            {selectedGame.name === "Demons Souls" && (
+              <DeSGuideList
+                selectedRun={selectedRun}
+                selectedGame={selectedGame}
+              />
+            )}
+            {selectedGame.name === "Sekiro" && (
+              <SKGuideList
+                selectedRun={selectedRun}
+                selectedGame={selectedGame}
+              />
+            )}
+            {selectedGame.name === "Elden Ring" && (
+              <ERGuideList
+                selectedRun={selectedRun}
+                selectedGame={selectedGame}
+              />
+            )}
           </>
         ) : (
           <GameGrid

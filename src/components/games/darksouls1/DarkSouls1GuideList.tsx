@@ -1,4 +1,4 @@
-import { SimpleGrid } from "@chakra-ui/react";
+import { Box, SimpleGrid } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import Ds1Card from "./Ds1Card";
 import { RunOption } from "@/components/RunSelector";
@@ -46,15 +46,21 @@ const DarkSouls1GuideList: React.FC<Props> = ({
 
   return (
     <div>
-      <SimpleGrid
-        columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
-        gap="25px"
-        padding="10px"
-      >
-        {filteredGuides.map((guide) => (
-          <Ds1Card key={guide.id} guide={guide} />
-        ))}
-      </SimpleGrid>
+      {filteredGuides.length > 0 ? (
+        <SimpleGrid
+          columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
+          gap="25px"
+          padding="10px"
+        >
+          {filteredGuides.map((guide) => (
+            <Ds1Card key={guide.id} guide={guide} />
+          ))}
+        </SimpleGrid>
+      ) : (
+        <Box textAlign="center" padding="20px">
+          No guides available for this selection.
+        </Box>
+      )}
     </div>
   );
 };

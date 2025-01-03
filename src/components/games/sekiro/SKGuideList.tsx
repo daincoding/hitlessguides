@@ -1,6 +1,6 @@
 import { Box, SimpleGrid } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-import Ds3Card from "./Ds3Card";
+import SKCard from "./SKCard";
 import { RunOption } from "@/components/RunSelector";
 import { Game } from "@/components/GameGrid";
 
@@ -20,15 +20,12 @@ interface Props {
   selectedGame: Game | null; // The currently selected game
 }
 
-const DarkSouls3GuideList: React.FC<Props> = ({
-  selectedRun,
-  selectedGame,
-}) => {
+const SKGuideList: React.FC<Props> = ({ selectedRun, selectedGame }) => {
   const [guides, setGuides] = useState<Guide[]>([]); // State to hold the guides list
 
   useEffect(() => {
     // Fetch the local JSON file
-    fetch("/gameguides/darksouls3.json")
+    fetch("/gameguides/sekiro.json")
       .then((response) => response.json())
       .then((data) => setGuides(data))
       .catch((error) => console.error("Error loading guides:", error));
@@ -53,7 +50,7 @@ const DarkSouls3GuideList: React.FC<Props> = ({
           padding="10px"
         >
           {filteredGuides.map((guide) => (
-            <Ds3Card key={guide.id} guide={guide} />
+            <SKCard key={guide.id} guide={guide} />
           ))}
         </SimpleGrid>
       ) : (
@@ -65,4 +62,4 @@ const DarkSouls3GuideList: React.FC<Props> = ({
   );
 };
 
-export default DarkSouls3GuideList;
+export default SKGuideList;
