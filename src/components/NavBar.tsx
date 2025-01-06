@@ -1,5 +1,5 @@
 import { Heading, HStack, Image } from "@chakra-ui/react";
-import waiting_dain from "../assets/waiting_dain.png";
+import waiting_dain from "/public/assets/waiting_dain.png";
 import ColorModeSwitch from "./ColorModeSwitch";
 
 const NavBar = () => {
