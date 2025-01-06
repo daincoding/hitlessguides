@@ -1,10 +1,10 @@
 [
-    { "id": 1, "name": "Dark Souls I", "genre": "Action RPG", "background": "src/assets/gamelogos/darksouls1.webp", "category": "FromSoft" },
-    { "id": 2, "name": "Dark Souls II", "genre": "Action RPG", "background": "src/assets/gamelogos/darksouls2.webp", "category": "FromSoft" },
-    { "id": 3, "name": "Dark Souls III", "genre": "Action RPG", "background": "src/assets/gamelogos/ds3_thumbnail.webp", "category": "FromSoft" },
-    { "id": 4, "name": "Bloodborne", "genre": "Action RPG", "background": "src/assets/gamelogos/bloodborne.webp", "category": "FromSoft" },
-    { "id": 5, "name": "Demons Souls", "genre": "Action RPG", "background": "src/assets/gamelogos/demonssouls.webp", "category": "FromSoft" },
-    { "id": 6, "name": "Sekiro", "genre": "Action RPG", "background": "src/assets/gamelogos/sekiro.webp", "category": "FromSoft" },
-    { "id": 7, "name": "Elden Ring", "genre": "Action RPG", "background": "src/assets/gamelogos/eldenring.webp", "category": "FromSoft" },
-    { "id": 8, "name": "Lies of P", "genre": "Action RPG", "background": "src/assets/gamelogos/liesofp.webp", "category": "NeoWiz" }
+    { "id": 1, "name": "Dark Souls I", "genre": "Action RPG", "background": "public/logos/gamelogos/darksouls1.webp", "category": "FromSoft" },
+    { "id": 2, "name": "Dark Souls II", "genre": "Action RPG", "background": "public/logos/gamelogos/darksouls2.webp", "category": "FromSoft" },
+    { "id": 3, "name": "Dark Souls III", "genre": "Action RPG", "background": "public/logos/gamelogos/ds3_thumbnail.webp", "category": "FromSoft" },
+    { "id": 4, "name": "Bloodborne", "genre": "Action RPG", "background": "public/logos/gamelogos/bloodborne.webp", "category": "FromSoft" },
+    { "id": 5, "name": "Demons Souls", "genre": "Action RPG", "background": "public/logos/gamelogos/demonssouls.webp", "category": "FromSoft" },
+    { "id": 6, "name": "Sekiro", "genre": "Action RPG", "background": "public/logos/gamelogos/sekiro.webp", "category": "FromSoft" },
+    { "id": 7, "name": "Elden Ring", "genre": "Action RPG", "background": "public/logos/gamelogos/eldenring.webp", "category": "FromSoft" },
+    { "id": 8, "name": "Lies of P", "genre": "Action RPG", "background": "public/logos/gamelogos/liesofp.webp", "category": "NeoWiz" }
   ]
