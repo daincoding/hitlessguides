@@ -7,5 +7,23 @@
       "gameId": 1,
       "thumbnail": "https://img.youtube.com/vi/LAyQkkrlmfU/maxresdefault.jpg",
       "youtubeLink": "https://www.youtube.com/watch?v=LAyQkkrlmfU"
+    },
+    {
+      "id": 2,
+      "name": "DEFINITELY A HALBERD DARK SOULS HITLESS GUIDE",
+      "author": "dinossindgeil",
+      "runtag": ["any-percent", "weapon-specific"],
+      "gameId": 1,
+      "thumbnail": "https://img.youtube.com/vi/VZ2xpOJdNEs/maxresdefault.jpg",
+      "youtubeLink": "https://www.youtube.com/watch?v=VZ2xpOJdNEs"
+    },
+    {
+      "id": 3,
+      "name": "How to become the ULTIMATE DARK SOULS PYROMANCER",
+      "author": "dinossindgeil",
+      "runtag": ["any-percent", "weapon-specific"],
+      "gameId": 1,
+      "thumbnail": "https://img.youtube.com/vi/Gaptx29bETM/maxresdefault.jpg",
+      "youtubeLink": "https://www.youtube.com/watch?v=Gaptx29bETM"
     }
   ]

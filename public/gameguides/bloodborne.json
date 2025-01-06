@@ -7,5 +7,14 @@
       "gameId": 4,
       "thumbnail": "https://img.youtube.com/vi/CYdHEl0r6ds/maxresdefault.jpg",
       "youtubeLink": "https://www.youtube.com/watch?v=CYdHEl0r6ds"
+    },
+    {
+      "id": 2,
+      "name": "ULTIMATE BLOODBORNE HITLESS GUIDE",
+      "author": "dinossindgeil",
+      "runtag": ["any-percent"],
+      "gameId": 4,
+      "thumbnail": "https://img.youtube.com/vi/1qlSmogvbXM/maxresdefault.jpg",
+      "youtubeLink": "https://www.youtube.com/watch?v=1qlSmogvbXM"
     }
   ]

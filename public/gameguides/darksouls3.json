@@ -16,5 +16,14 @@
         "gameId": 3,
         "thumbnail": "https://img.youtube.com/vi/v2E1rVlQLrM/maxresdefault.jpg",
         "youtubeLink": "https://www.youtube.com/watch?v=v2E1rVlQLrM"
+      },
+      {
+        "id": 3,
+        "name": "ULTIMATE DARK SOULS 3 HITLESS GUIDE",
+        "author": "dinossindgeil",
+        "runtag": ["any-percent"],
+        "gameId": 3,
+        "thumbnail": "https://img.youtube.com/vi/xFXT0J0yvi4/maxresdefault.jpg",
+        "youtubeLink": "https://www.youtube.com/watch?v=xFXT0J0yvi4"
       }
   ]

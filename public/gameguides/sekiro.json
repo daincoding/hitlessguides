@@ -7,5 +7,14 @@
       "gameId": 6,
       "thumbnail": "https://img.youtube.com/vi/cjqhvpRH0fY/maxresdefault.jpg",
       "youtubeLink": "https://www.youtube.com/watch?v=cjqhvpRH0fY"
+    },
+    {
+      "id": 1,
+      "name": "ULTIMATE SEKIRO HITLESS GUIDE",
+      "author": "dinossindgeil",
+      "runtag": ["any-percent"],
+      "gameId": 6,
+      "thumbnail": "https://img.youtube.com/vi/7Ibho9buY6Y/maxresdefault.jpg",
+      "youtubeLink": "https://www.youtube.com/watch?v=7Ibho9buY6Y"
     }
   ]
