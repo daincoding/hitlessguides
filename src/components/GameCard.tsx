@@ -14,7 +14,7 @@ const GameCard = ({ game, onClick }: Props) => {
       onClick={onClick}
       cursor="pointer"
     >
-      <Image src={game.background} height="250px" width="500px" />
+      <Image src={game.background} height="250px" width="100%" />
       <Card.Body>
         <Card.Title fontSize="2xl" textAlign="center">
           {game.name}
