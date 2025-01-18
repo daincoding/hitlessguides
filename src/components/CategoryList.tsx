@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 export interface Categories {
   id: number;
-  category: string;
+  category: string[];
   categorylogo: string;
 }
 
