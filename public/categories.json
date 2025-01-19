@@ -1,5 +1,6 @@
 [
-    { "id": 1, "category": "FromSoft", "categorylogo": "assets/FromSoft.webp" },
-    { "id": 2, "category": "NeoWiz",  "categorylogo": "assets/neowiz_logo.webp" },
-    { "id": 3, "category": "Nintendo", "categorylogo": "assets/nintendo_logo.webp" }
+  { "id": 0, "category": "All", "categorylogo": "/public/assets/waiting_dain.png" },
+  { "id": 1, "category": "FromSoft", "categorylogo": "assets/FromSoft.webp" },
+  { "id": 2, "category": "NeoWiz", "categorylogo": "assets/neowiz_logo.webp" },
+  { "id": 3, "category": "Nintendo", "categorylogo": "assets/nintendo_logo.webp" }
   ]

@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 
 export interface Categories {
   id: number;
-  category: string[];
+  category: string;
   categorylogo: string;
 }
 
 interface Props {
-  onSelectedCategory: (category: Categories) => void;
+  onSelectedCategory: (category: Categories | null) => void;
   selectedCategory: Categories | null;
 }
 
@@ -46,7 +46,11 @@ const CategoryList: React.FC<Props> = ({
                 fontWeight={
                   category.id === selectedCategory?.id ? "bold" : "normal"
                 }
-                onClick={() => onSelectedCategory(category)}
+                onClick={() =>
+                  category.category === "All"
+                    ? onSelectedCategory(null) // Reset selection
+                    : onSelectedCategory(category)
+                }
               >
                 {category.category}
               </Button>
